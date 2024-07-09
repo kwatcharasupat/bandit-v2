@@ -1,0 +1,4 @@
+optimizer:
+  cls: Adam
+  kwargs:
+    lr: 1.0e-3

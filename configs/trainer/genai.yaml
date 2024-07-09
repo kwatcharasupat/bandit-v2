@@ -1,0 +1,17 @@
+loggers: 
+  - cls: TensorBoardLogger
+    kwargs:
+      save_dir: $SAVE_DIR
+callbacks: []
+strategy:
+  cls: RayDDPStrategy
+plugins:
+  - cls: RayLightningEnvironment
+    kwargs: {}
+kwargs:
+  accelerator: auto
+  devices: auto
+  max_epochs: 200
+  gradient_clip_val: 2.0
+  gradient_clip_algorithm: norm
+  enable_checkpointing: false

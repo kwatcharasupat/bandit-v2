@@ -1,0 +1,59 @@
+datasets:
+  train:
+    cls: DivideAndRemasterRandomChunkDataset
+    kwargs:
+      split: train
+      subset: ${....commons.datasets.subset}
+      stems: ${....commons.datasets.stems}
+      npy_memmap: ${....commons.datasets.npy_memmap}
+      full_audio_length_seconds: ${....commons.datasets.full_audio_length_seconds}
+      data_root: ${....commons.datasets.data_root}
+      chunk_size_seconds: ${....commons.datasets.chunk_size_seconds}
+      target_dataset_length: 16384 #10240
+      aligned_chunking: false
+      auto_include_mixture: true
+      recompute_mixture: true
+
+  val:
+    cls: DivideAndRemasterDeterministicChunkDataset
+    kwargs:
+      split: val
+      subset: ${....commons.datasets.subset}
+      stems: ${....commons.datasets.stems}
+      npy_memmap: ${....commons.datasets.npy_memmap}
+      full_audio_length_seconds: ${....commons.datasets.full_audio_length_seconds}
+      data_root: ${....commons.datasets.data_root}
+      chunk_size_seconds: ${....commons.datasets.chunk_size_seconds}
+      hop_size_seconds: ${....commons.datasets.hop_size_seconds}
+      aligned_chunking: true
+      auto_include_mixture: true
+      recompute_mixture: true
+  test:
+    cls: DivideAndRemasterFullTrackDataset
+    kwargs:
+      split: test
+      subset: ${....commons.datasets.subset}
+      stems: ${....commons.datasets.stems}
+      npy_memmap: ${....commons.datasets.npy_memmap}
+      full_audio_length_seconds: ${....commons.datasets.full_audio_length_seconds}
+      data_root: ${....commons.datasets.data_root}
+
+
+commons:
+  datasets:
+    subset: spa
+    stems:
+      - speech
+      - music
+      - sfx
+    npy_memmap: true
+    full_audio_length_seconds: 60.0
+    chunk_size_seconds: 8.0
+    hop_size_seconds: 8.0
+    data_root: /fsx_vfx/projects/aa-cass/data/dnr-variants/dnr-v3-com-48k-smad-multi-v2
+
+datamodule:
+  cls: DivideAndRemasterDataModule
+  kwargs:
+    batch_size_per_gpu: 8
+    num_workers: 8

@@ -1,0 +1,27 @@
+loggers: 
+  - cls: TensorBoardLogger
+    kwargs:
+      # save_dir: $LOGS_ROOT
+      save_dir: $LOGS_ROOT
+      name: lightning_logs_test
+  # - cls: CSVLogger
+  #   kwargs:
+  #     # save_dir: $LOGS_ROOT
+  #     save_dir: $LOGS_ROOT
+  #     name: lightning_logs_test
+callbacks: []
+strategy: 
+  cls: "ddp"
+plugins: []
+kwargs:
+  accelerator: auto
+  devices: auto
+  max_epochs: 100
+  gradient_clip_val: 2.0
+  gradient_clip_algorithm: norm
+  # detect_anomaly: true
+  # fast_dev_run: 16
+  # limit_train_batches: 32
+  # limit_val_batches: 16
+  enable_checkpointing: false
+  # reload_dataloaders_every_n_epochs: 1

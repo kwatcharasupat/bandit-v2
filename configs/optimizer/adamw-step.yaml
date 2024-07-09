@@ -1,0 +1,10 @@
+optimizer:
+  cls: AdamW
+  kwargs:
+    lr: 1.0e-3
+    fused: true
+scheduler:
+  cls: StepLR
+  kwargs:
+    step_size: 1
+    gamma: 0.99

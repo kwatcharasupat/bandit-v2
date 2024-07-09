@@ -1,0 +1,5 @@
+num_workers: 8
+use_gpu: true
+storage_path: $RAY_ROOTray_results
+# storage_path: /root/ray_results
+cluster_name: genai

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JsonSchemaMappingsProjectConfiguration">
+    <state>
+      <map>
+        <entry key="rocket.yml">
+          <value>
+            <SchemaInfo>
+              <option name="generatedName" value="New Schema" />
+              <option name="name" value="rocket.yml" />
+              <option name="relativePathToSchema" value="https://arcas.test.netflix.net/api/v1/schema/rocket-yml" />
+              <option name="schemaVersion" value="JSON Schema version 7" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="pattern" value="true" />
+                    <option name="path" value=".netflix/rocket.yml" />
+                    <option name="mappingKind" value="Pattern" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
+        <entry key="spinnaker.yml">
+          <value>
+            <SchemaInfo>
+              <option name="generatedName" value="New Schema" />
+              <option name="name" value="spinnaker.yml" />
+              <option name="relativePathToSchema" value="https://api.spinnaker.mgmt.netflix.net/managed/delivery-configs/schema" />
+              <option name="schemaVersion" value="JSON Schema version 7" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="pattern" value="true" />
+                    <option name="path" value=".netflix/spinnaker.yml" />
+                    <option name="mappingKind" value="Pattern" />
+                  </Item>
+                  <Item>
+                    <option name="pattern" value="true" />
+                    <option name="path" value=".netflix/spinnaker/*.yml" />
+                    <option name="mappingKind" value="Pattern" />
+                  </Item>
+                  <Item>
+                    <option name="pattern" value="true" />
+                    <option name="path" value="spinnaker.yml" />
+                    <option name="mappingKind" value="Pattern" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
+      </map>
+    </state>
+  </component>
+</project>

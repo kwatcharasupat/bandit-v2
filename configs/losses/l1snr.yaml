@@ -1,0 +1,84 @@
+- name: l1snr/audio/speech
+  cls: L1SNR
+  kwargs:
+    epsilon: 1.0e-3
+  weight: 1.0
+  keys_:
+    pred:
+      - estimates
+      - speech
+      - audio
+    target:
+      - sources
+      - speech
+      - audio
+- name: l1snr/audio/music
+  cls: L1SNR
+  kwargs:
+    epsilon: 1.0e-3
+  weight: 1.0
+  keys_:
+    pred:
+      - estimates
+      - music
+      - audio
+    target:
+      - sources
+      - music
+      - audio
+- name: l1snr/audio/sfx
+  cls: L1SNR
+  kwargs:
+    epsilon: 1.0e-3
+  weight: 1.0
+  keys_:
+    pred:
+      - estimates
+      - sfx
+      - audio
+    target:
+      - sources
+      - sfx
+      - audio
+- name: l1snr/spectrogram/speech
+  cls: L1SNR
+  kwargs:
+    epsilon: 1.0e-3
+  weight: 1.0
+  keys_:
+    pred:
+      - estimates
+      - speech
+      - spectrogram
+    target:
+      - sources
+      - speech
+      - spectrogram
+- name: l1snr/spectrogram/music
+  cls: L1SNR
+  kwargs:
+    epsilon: 1.0e-3
+  weight: 1.0
+  keys_:
+    pred:
+      - estimates
+      - music
+      - spectrogram
+    target:
+      - sources
+      - music
+      - spectrogram
+- name: l1snr/spectrogram/sfx
+  cls: L1SNR
+  kwargs:
+    epsilon: 1.0e-3
+  weight: 1.0
+  keys_:
+    pred:
+      - estimates
+      - sfx
+      - spectrogram
+    target:
+      - sources
+      - sfx
+      - spectrogram

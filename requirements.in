@@ -1,0 +1,38 @@
+# Core, Dashboard, Cluster Launcher, Data, Train, Tune, Serve, RLlib
+# ray[default,data,train]==2.7.1
+ray[default,data,train]==2.11.0
+nflx-manta
+async-timeout
+
+# Data preparation
+nflx_metaflow
+jasper>=0.5.5
+
+
+# Same pytorch for everyone (for now)
+--extra-index-url https://download.pytorch.org/whl/cu118
+torch==2.0.0+cu118
+torchvision==0.15.1+cu118
+torchaudio==2.0.1
+
+# Add project specific packages here
+pytorch_lightning>=2.3.0
+torchmetrics
+
+torch-audiomentations
+
+asteroid
+
+tqdm
+
+ffmpeg-python
+librosa
+pedalboard
+
+hydra-core
+# omegaconf
+
+# soundfile
+# resampy
+
+# tensorboard

@@ -1,0 +1,18 @@
+defaults:
+    - data: dnr-v3-com-smad-za
+    - models: bandit-mus64
+    - losses: l1snr
+    - metrics: default
+    - trainer: noray
+    - optimizer: adam-step
+    - hydra: default
+    - inference: chunked-tensor
+    - _self_
+
+seed: 42
+fs: 48000
+ckpt_path: null
+
+hydra:
+    searchpath: 
+        - "file://$REPO_ROOT/configs"

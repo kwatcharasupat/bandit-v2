@@ -1,0 +1,6 @@
+cls: StandardTensorChunkedInferenceHandler
+kwargs:
+  chunk_size_seconds: 8.0
+  hop_size_seconds: 1.0
+  inference_batch_size: 16
+  

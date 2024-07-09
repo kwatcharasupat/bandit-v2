@@ -1,0 +1,201 @@
+train:
+  - name: snr/audio/speech
+    cls: SafeSignalNoiseRatio
+    keys_:
+      pred:
+        - estimates
+        - speech
+        - audio
+      target:
+        - sources
+        - speech
+        - audio
+  - name: snr/audio/music
+    cls: SafeSignalNoiseRatio
+    keys_:
+      pred:
+        - estimates
+        - music
+        - audio
+      target:
+        - sources
+        - music
+        - audio
+  - name: snr/audio/sfx
+    cls: SafeSignalNoiseRatio
+    keys_:
+      pred:
+        - estimates
+        - sfx
+        - audio
+      target:
+        - sources
+        - sfx
+        - audio
+  - name: sisnr/audio/speech
+    cls: SafeScaleInvariantSignalNoiseRatio
+    keys_:
+      pred:
+        - estimates
+        - speech
+        - audio
+      target:
+        - sources
+        - speech
+        - audio
+  - name: sisnr/audio/music
+    cls: SafeScaleInvariantSignalNoiseRatio
+    keys_:
+      pred:
+        - estimates
+        - music
+        - audio
+      target:
+        - sources
+        - music
+        - audio
+  - name: sisnr/audio/sfx
+    cls: SafeScaleInvariantSignalNoiseRatio
+    keys_:
+      pred:
+        - estimates
+        - sfx
+        - audio
+      target:
+        - sources
+        - sfx
+        - audio
+val:
+  - name: snr/audio/speech
+    cls: SafeSignalNoiseRatio
+    keys_:
+      pred:
+        - estimates
+        - speech
+        - audio
+      target:
+        - sources
+        - speech
+        - audio
+  - name: snr/audio/music
+    cls: SafeSignalNoiseRatio
+    keys_:
+      pred:
+        - estimates
+        - music
+        - audio
+      target:
+        - sources
+        - music
+        - audio
+  - name: snr/audio/sfx
+    cls: SafeSignalNoiseRatio
+    keys_:
+      pred:
+        - estimates
+        - sfx
+        - audio
+      target:
+        - sources
+        - sfx
+        - audio
+  - name: sisnr/audio/speech
+    cls: SafeScaleInvariantSignalNoiseRatio
+    keys_:
+      pred:
+        - estimates
+        - speech
+        - audio
+      target:
+        - sources
+        - speech
+        - audio
+  - name: sisnr/audio/music
+    cls: SafeScaleInvariantSignalNoiseRatio
+    keys_:
+      pred:
+        - estimates
+        - music
+        - audio
+      target:
+        - sources
+        - music
+        - audio
+  - name: sisnr/audio/sfx
+    cls: SafeScaleInvariantSignalNoiseRatio
+    keys_:
+      pred:
+        - estimates
+        - sfx
+        - audio
+      target:
+        - sources
+        - sfx
+        - audio
+test:
+  - name: snr/audio/speech
+    cls: SafeSignalNoiseRatio
+    keys_:
+      pred:
+        - estimates
+        - speech
+        - audio
+      target:
+        - sources
+        - speech
+        - audio
+  - name: snr/audio/music
+    cls: SafeSignalNoiseRatio
+    keys_:
+      pred:
+        - estimates
+        - music
+        - audio
+      target:
+        - sources
+        - music
+        - audio
+  - name: snr/audio/sfx
+    cls: SafeSignalNoiseRatio
+    keys_:
+      pred:
+        - estimates
+        - sfx
+        - audio
+      target:
+        - sources
+        - sfx
+        - audio
+  - name: sisnr/audio/speech
+    cls: SafeScaleInvariantSignalNoiseRatio
+    keys_:
+      pred:
+        - estimates
+        - speech
+        - audio
+      target:
+        - sources
+        - speech
+        - audio
+  - name: sisnr/audio/music
+    cls: SafeScaleInvariantSignalNoiseRatio
+    keys_:
+      pred:
+        - estimates
+        - music
+        - audio
+      target:
+        - sources
+        - music
+        - audio
+  - name: sisnr/audio/sfx
+    cls: SafeScaleInvariantSignalNoiseRatio
+    keys_:
+      pred:
+        - estimates
+        - sfx
+        - audio
+      target:
+        - sources
+        - sfx
+        - audio

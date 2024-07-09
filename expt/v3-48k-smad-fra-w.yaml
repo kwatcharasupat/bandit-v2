@@ -1,0 +1,18 @@
+defaults:
+    - data: dnr-v3-com-smad-fra
+    - models: bandit-mus64
+    - losses: l1snr
+    - metrics: default
+    - trainer: genai
+    - optimizer: adamw-step
+    - hydra: default
+    - ray: genai
+    - _self_
+
+seed: 42
+fs: 48000
+ckpt_path: null
+
+hydra:
+    searchpath: 
+        - "file://$REPO_ROOT/configs"

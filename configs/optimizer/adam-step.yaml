@@ -1,0 +1,11 @@
+optimizer:
+  cls: Adam
+  kwargs:
+    lr: 1.0e-3
+    foreach: null
+    fused: true
+scheduler:
+  cls: StepLR
+  kwargs:
+    step_size: 1
+    gamma: 0.99

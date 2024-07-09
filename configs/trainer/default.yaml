@@ -1,0 +1,28 @@
+loggers: 
+  - cls: TensorBoardLogger
+    kwargs:
+      # save_dir: $LOGS_ROOT
+      save_dir: $LOGS_ROOT
+callbacks: []
+strategy:
+  cls: RayDDPStrategy
+plugins:
+  - cls: RayLightningEnvironment
+    kwargs: {}
+  # - cls: MixedPrecision
+  #   kwargs:
+  #     precision: 16-mixed
+  #     device: cuda
+kwargs:
+  accelerator: auto
+  devices: auto
+  max_epochs: 100
+  gradient_clip_val: 2.0
+  gradient_clip_algorithm: norm
+  # detect_anomaly: true
+  # fast_dev_run: 16
+  # limit_train_batches: 8
+  # limit_val_batches: 8
+  enable_checkpointing: false
+  # reload_dataloaders_every_n_epochs: 1
+  num_sanity_val_steps: 2
