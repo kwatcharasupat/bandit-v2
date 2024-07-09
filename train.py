@@ -65,27 +65,18 @@ def train_func_per_worker(cfg):
 def train(cfg: DictConfig):
     print("Entering train function")
 
-    # ray.init(resources={"accelerator_type": "A100"})
     ray.init(
         # runtime_env={"env_vars": {"PL_DISABLE_FORK": "1"}},
         configure_logging=True,
         logging_level=logging.INFO,
     )
 
-    cluster_name = cfg.ray.get("cluster_name", "workbench")
-
-    if cluster_name == "workbench":
-        resources_per_worker = {"GPU": 1, "CPU": 10}
-        kwargs = {}
-    elif cluster_name == "genai":
-        resources_per_worker = {
-            "GPU": 1,
-            "CPU": 8,
-            "accelerator_type:A100": 0.01,
-        }  # "gpu_type_A100": 1.0}
-        kwargs = {}
-    else:
-        raise ValueError(f"Unknown cluster name: {cluster_name}")
+    resources_per_worker = {
+        "GPU": 1,
+        "CPU": 8,
+        "accelerator_type:A100": 0.01,
+    }
+    kwargs = {}
 
     scaling_config = ScalingConfig(
         num_workers=cfg.ray.num_workers,
